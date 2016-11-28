@@ -1,0 +1,157 @@
+body {
+	background-color:#cccccc;
+	color:#000000;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color:#fff;
+}
+
+.choices:nth-last-child(1)) {
+	margin-top:25px;
+}
+
+.credits {
+}
+
+.credits p {
+}
+
+.pagebreak {
+}
+
+#title {
+	font-family: 'Bungee Inline', cursive;
+	font-size: 54pt;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: -34px;
+}
+
+.title {
+	display: none;
+}
+
+#container {
+	text-align: center;
+    	border: 1px solid black;
+    	height: 74%;
+    	width: 90%;
+    	position: absolute;
+	left: 5%;
+    	top: 18%;
+	overflow-y: auto;
+	background: black;
+}
+
+#content {
+	position: absolute;
+	bottom: 0;
+}
+
+#content p, #content span {
+	margin:0;
+	line-height:1.6;
+	text-align:left;
+	word-wrap:break-word;
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	color: white;
+}
+
+#content #reset {
+	position: relative;
+	bottom: -87%;
+}
+
+#content div:not(#reset) {
+	display: block;
+	position: relative;
+}
+
+#content button.disposable {
+	bottom: 0;
+}
+
+#contact {
+	margin:25px 0;
+}
+
+p#headline {
+	font-weight: bold;
+	text-align: left;
+}
+
+button {
+	cursor: pointer;
+	font-size: 20px;
+	width: 100%;
+	display: block;
+	position: relative;
+	bottom: -87%;
+	background: transparent;
+	color: white;
+	text-align: left;
+	border: none;
+	padding-left: 20px;
+	font-family: 'VT323', monospace;
+}
+
+button:hover {
+	padding-left: 14px;
+	font-weight: bold;
+}
+
+button:hover::before {
+	content: ">";
+}
+
+.timehead table, .timehead table td{
+	padding: 0px 15px 0px 15px;
+	border: none;
+	color: white;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'VT323', monospace;
+	font-size:20px;
+}
+
+.timehead table td:nth-of-type(2) {
+	text-align: right;
+	color: #87ceeb;
+	width: 50px;
+	border-right: 2px solid #87ceeb;
+}
+
+/*
+.timehead table td:nth-of-type(2)::after {
+	content: "|";
+	color: #87ceeb;
+	font-size: 50px;
+}
+*/
+
+#content div:not(.choices) {
+	bottom: 5px;
+}
+
+#content #button {
+	bottom: 0;
+}
+
+#content div:nth-last-of-type(1) {
+	border-top: 1px solid #87ceeb;
+	padding-top: 1px;
+}
+
+#content #button button, #content .choices button{
+	margin-top: 22px;
+}
+
+#content button[choice=ohmygod], #content button[choice=off], #content button[choice=saynothing], #content button[choice=youknow], #content button[choice=whatdick], #content button[choice=howami], #content button[choice=ugh], #content button[choice=alotofguys]{
+	margin-top: 0px;
+}
