@@ -140,15 +140,15 @@ Story.prototype = {
 			],
 
 			//this.createContinue("end")
-			this.createContinue("menu", "Log out", this.exit)
+			this.createContinue("final", "Log out", this.ending)
 		);
 
-		this.createPage(
+		/*this.createPage(
 			/*
 			"end",
 			this.createParagraph(this.game.lang.current.story.end.head),
 			null,
-			this.createContinue("menu", this.game.lang.current.story.end.opt1, this.exit)*/
+			this.createContinue("menu", this.game.lang.current.story.end.opt1, this.exit)
 			"end",
 			this.createParagraph(this.game.lang.current.story.end.head),
 			[
@@ -162,6 +162,24 @@ Story.prototype = {
 			 ],
 			 null
 			],
+			this.createContinue("menu", "Log out", "final")
+		);*/
+		this.createPage(
+			"final",
+
+			this.createParagraph(this.game.lang.current.story.start.head),
+
+			[
+			[
+			this.createChoice("nothingmuch",
+					  this.game.lang.current.story.start.opt1,
+				          this.createParagraph(this.game.lang.current.story.start.optPara1)
+					)
+			],
+			this.createParagraph(this.game.lang.current.story.start.tail)
+			],
+
+			//this.createContinue("end")
 			this.createContinue("menu", "Log out", this.exit)
 		);
 
@@ -298,6 +316,31 @@ Story.prototype = {
 		this.game.startMenu(true);
 	},
 
+	ending: function() {
+		$(this.game.content).empty();
+		
+		for (var i = 0; i < (this.game.lang.current.story.fin.pars).length; i++){
+	 	 var test = document.createElement("div");
+		 $(test).addClass("finalpar");
+		 $(test).html(this.game.lang.current.story.fin.pars[i]);
+		 $(this.game.content).append(test);
+		}
+
+		var butdiv = document.createElement("div");
+		var button = document.createElement("button");
+		$(button).text("Back to menu");
+		$(button).attr("continue", "menu");
+		$(button).addClass("choices");
+		$(button).addClass("disposable");
+		$(button).on("mouseup touchend", (this.exit).bind(this));
+		
+		$(butdiv).append(button);
+		$(butdiv).attr("id", "button");
+		$(butdiv).addClass("finalpar");
+		
+		$(this.game.content).append(butdiv);
+	},
+
 	createPage: function createPage(id, head, choices, next) {
 		if (this.pages[id] != null)
 		console.warn("Overwriting page " + id);
@@ -330,6 +373,7 @@ Story.prototype = {
 		$(button).addClass("choices");
 		$(button).addClass("disposable");
 		$(button).on("mouseup touchend", callback == null? this.handleChoice.bind(this) : callback.bind(this));
+		
 		$(butdiv).append(button);
 		$(butdiv).attr("id", "button");
 

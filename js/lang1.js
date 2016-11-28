@@ -176,7 +176,18 @@ Language.prototype.en = {
 			],
 			tail: [
 			]
+		},
+		fin: {
+			pars: [
+				"<p>The internet's openness and anonymity has always provided an environment in which harassment and bullying can thrive, in many cases without any repercussions for the bullies and harassers. This online harassment parallels in-person harassment, but oftentimes amplified due to the protections the medium of the internet provides for the harassers. This is especially true for LGBT people, who have seen online harassment rates grow to rates similar to their in-person harassment and bullying rates. The same freedom which allows gender and sexual minority (GSM) people to express themselves more openly online also allows people who are unsupportive of their identities to express their discontent more openly, generating communities online which vary from incredibly supportive to incredibly hostile towards GSM people, likely to much further extrema than offline (although this is difficult to verify).</p>",
+				"<p>Regardless of the medium, the sexual harassment rate for people of non-traditional gender or sexual identities tends to be much greater than that for more traditionally conforming people. In particular, the rate of online sexual harassment is especially high for LGBT people when compared to the rate of online sexual harassment for non-LGBT people<sup>1</sup>. While there is increased support for LGBT people throughout society, which can be largely attributed to the increased prevalence of the internet in our lives and our social interaction, there is a parallel negative reaction against GSM people which appears in the form of harassment and cyberbullying. </p>",
+				"<table><tr><td>Percent of LGBT youth who have been subject to online sexual harassment:</td><td>34.5%</td></tr><tr><td>Percent for non-LGBT youth:</td><td>8%</td></tr><tr><td>Percent of LGBT youth who have been subject to in-person sexual harassment:</td><td>36%</td></tr></table><table><tr><td>Percent of non-LGBT youth:</td><td>13.5%</td></tr><tr><td>Percent of Transgender youth who have been subject to online sexual harassment:</td><td>45%</td></tr><tr><td>Percent of cisgender youth:</td><td>15%</td></tr></table>"
+			],
+			stat: [
+
+			]
 		}
+		
 	}
 };
 
