@@ -1,4 +1,3 @@
-
 function Language(game) {
 	this.game = game;
 	this.current = this.en;
@@ -163,11 +162,11 @@ Language.prototype.en = {
 				 "11:33:20", "User", "No, I'm not even into guys"
 			],
 			tail: [
-				 "11:33:21", "P1", "Ohhh, I get it, you guys get the <em>weird lesbians</em>."
+				 "11:33:21", "P1", "Ohhh, I get it."
 			]
 		},
 
-		VII: {
+		end: {
 			head: [
   				"11:33:22", "User", "Omg, why am I even talking to you..."
 			],

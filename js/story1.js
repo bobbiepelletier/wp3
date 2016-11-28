@@ -136,20 +136,33 @@ Story.prototype = {
 				          this.createParagraph(this.game.lang.current.story.VI.optPara2)
 					)
 			],
-			this.createParagraph(this.game.lang.current.story.VI.tail)
+			this.createParagraph(this.game.lang.current.story.VI.tail),
 			],
 
-			this.createContinue("VII")
+			//this.createContinue("end")
+			this.createContinue("menu", "Log out", this.exit)
 		);
 
 		this.createPage(
-			"VII",
-
-			this.createParagraph(this.game.lang.current.story.VII.head),
-
+			/*
+			"end",
+			this.createParagraph(this.game.lang.current.story.end.head),
 			null,
-
-			this.createContinue("menu", this.game.lang.current.story.VII.opt1, this.exit)
+			this.createContinue("menu", this.game.lang.current.story.end.opt1, this.exit)*/
+			"end",
+			this.createParagraph(this.game.lang.current.story.end.head),
+			[
+			 [
+			  null,
+			  null
+			 ],
+			 this.createParagraph(this.game.lang.current.story.end.head),
+			 [
+			  null
+			 ],
+			 null
+			],
+			this.createContinue("menu", "Log out", this.exit)
 		);
 
 	},
